@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kubaspatny.simplecounter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17"
+        android:maxSdkVersion="19"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.kubaspatny.simplecounter.CounterActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.kubaspatny.simplecounter.CounterContentProvider"
+            android:authorities="com.kubaspatny.simplecounter.data.countercontentprovider"
+            android:exported="false"
+            android:readPermission="true"
+            android:writePermission="true" >
+        </provider>
+
+        <activity
+            android:name="com.kubaspatny.simplecounter.CounterEditActivity"
+            android:label="@string/title_activity_counter_edit" 
+            android:parentActivityName="com.kubaspatny.simplecounter.CounterActivity" >
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.kubaspatny.simplecounter.CounterActivity" />
+            
+        </activity>
+
+        <receiver android:name="com.kubaspatny.simplecounter.widget.CounterWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+        <receiver
+            android:name="com.kubaspatny.simplecounter.widget.CounterWidgetIntentReceiver"
+            android:label="@string/app_name"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kubaspatny.simplecounter.widget.ACTION_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kubaspatny.simplecounter.widget.ACTION_INCREMENT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kubaspatny.simplecounter.widget.ACTION_DECREMENT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+
+        <activity
+            android:name="com.kubaspatny.simplecounter.widget.CounterWidgetConfigActivity"
+            android:label="@string/title_activity_counter_widget_config"
+            >
+            
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+            
+        </activity>
+    </application>
+
+</manifest>

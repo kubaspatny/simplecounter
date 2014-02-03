@@ -1,0 +1,81 @@
+<!--
+  Copyright 2014 Jakub Spatny
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CounterWidgetConfigActivity" >
+
+    
+    <TextView
+        android:id="@+id/label_selectcounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/widget_config_selectcounter"
+        android:textSize="20sp"
+        android:layout_margin="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_selectcounter"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/label_selectcolormode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_counter"
+        android:text="@string/widget_config_selectcolormode"
+        android:textSize="20sp"
+        android:layout_margin="8dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_colormode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_selectcolormode"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/widget_config_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_cancel"
+            android:padding="15dp"/>
+
+        <Button
+            android:id="@+id/widget_config_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_createWidget"
+            android:padding="15dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

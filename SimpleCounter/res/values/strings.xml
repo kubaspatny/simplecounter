@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Simple Counter</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_counter_edit"></string>
+    <string name="edit_counter_color">Change counter color</string>
+    <string name="edit_counter_delete">Delete counter</string>
+    <string name="reset">Reset</string>
+    <string name="newcounter_title_hint">Counter Title</string>
+    <string name="title_activity_counter_widget_config">Simple Counter Widget Configuration</string>
+    <string name="widget_deleted">Counter deleted</string>
+    <string name="empty_config">No counters found, you must create a counter first.</string>
+    <string name="empty_counterlist_createcounter">Create a counter</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_createWidget">Create Widget</string>
+    <string name="widget_config_selectcounter">Select counter:</string>
+    <string name="widget_config_selectcolormode">Select widget color:</string>
+    
+    <string-array name="colormodes_array">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Counter Color</item>        
+    </string-array>
+    
+
+</resources>
